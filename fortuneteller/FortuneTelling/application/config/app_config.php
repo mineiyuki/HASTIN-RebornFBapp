@@ -1,8 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 //facebook app id and secret
-$config['appID'] = "269496346501377";
-$config['appSecret'] = "f060eee0295cbce321aa9337712971bf"; 
+$config['appID'] = "461867823852501";
+$config['appSecret'] = "32a6b43df6ebfa894c0b1a53547671a6"; 
 //page of that facebook app
 $config['facebook_page']="https://www.facebook.com/FortuneTellerClover";
 //facebook tab url
