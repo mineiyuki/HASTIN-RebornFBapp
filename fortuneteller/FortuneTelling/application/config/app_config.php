@@ -4,21 +4,21 @@
 $config['appID'] = "461867823852501";
 $config['appSecret'] = "32a6b43df6ebfa894c0b1a53547671a6"; 
 //page of that facebook app
-$config['facebook_page']="https://www.facebook.com/FortuneTellerClover";
+$config['facebook_page']="https://www.facebook.com/HastinTest/";
 //facebook tab url
-$config['facebookTabURL'] ="https://www.facebook.com/FortuneTellerClover/app_269496346501377";
+$config['facebookTabURL'] ="https://www.facebook.com/HastinTest/app_461867823852501";
 
-$config['facebook_post_link']="https://www.facebook.com/FortuneTellerClover/app_269496346501377";
+$config['facebook_post_link']="https://www.facebook.com/HastinTest/app_461867823852501";
 
 
 
 //facebook meta data
-$config['app_meta'] =	'<meta property="og:title" content="Fortune Teller" />
+$config['app_meta'] =	'<meta property="og:title" content="HASTINtest" />
 							<meta property="og:type" content="game" />
-							<meta property="og:url" content="https://apps.facebook.com/269496346501377/" />
+							<meta property="og:url" content="https://www.facebook.com/HastinTest/app_461867823852501" />
 							<meta property="og:image" content="http://cloverstudio.no-ip.org/FortuneTelling/images/share_img.jpg" />
-							<meta property="og:site_name" content="Fortune Teller" />
-							<meta property="fb:admins" content="100000065860718" />';
+							<meta property="og:site_name" content="HASTINtest" />
+							<meta property="fb:admins" content="100001111211003" />';
 
 
 $config['like_image_link']="like_image.jpg";
