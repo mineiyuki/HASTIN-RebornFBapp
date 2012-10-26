@@ -15,7 +15,7 @@ $config['facebook_post_link']="https://www.facebook.com/HastinTest/app_461867823
 //facebook meta data
 $config['app_meta'] =	'<meta property="og:title" content="HASTINtest" />
 							<meta property="og:type" content="game" />
-							<meta property="og:url" content="https://www.facebook.com/HastinTest/app_461867823852501" />
+							<meta property="og:url" content="https://apps.facebook.com/461867823852501" />
 							<meta property="og:image" content="http://cloverstudio.no-ip.org/FortuneTelling/images/share_img.jpg" />
 							<meta property="og:site_name" content="HASTINtest" />
 							<meta property="fb:admins" content="100001111211003" />';

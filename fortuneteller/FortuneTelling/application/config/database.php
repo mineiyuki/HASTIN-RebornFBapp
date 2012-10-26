@@ -48,7 +48,8 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+// $db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'mysql244.db.sakura.ne.jp';
 $db['default']['username'] = 'mecab';
 $db['default']['password'] = 'hastin1234';
 $db['default']['database'] = 'mecab_hastin';
