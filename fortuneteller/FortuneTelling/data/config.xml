@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+* <questions> groups all the questions and answers used in the app 
+* each <item> can contain one question and 1 or more answers
+* 
+* <results> group all the possible results 
+* results are arranged as a tree structure
+* the tree has as much levels as there are questions
+* 
+* 	
+-->
+
+<root>
+	<questions>
+		<item>
+			<question>Question 1</question>
+			<answer>Answer 1</answer>
+			<answer>Answer 2</answer>
+			<answer>Answer 3</answer>
+		</item>
+		<item>
+			<question>Question 2</question>
+			<answer>Answer 1</answer>
+			<answer>Answer 2</answer>
+			<answer>Answer 3</answer>
+		</item>
+		<item>
+			<question>Question 3</question>
+			<answer>Answer 1</answer>
+			<answer>Answer 2</answer>
+			<answer>Answer 3</answer>
+		</item>
+	</questions>
+	
+	
+	<results>
+		<q1 ans="0">
+			<q2 ans="0">
+				<q3 ans="0" img="result_image.jpg">answer 0 0 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 0 0 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 0 0 2</q3>
+			</q2>
+			<q2 ans="1">
+				<q3 ans="0" img="result_image.jpg">answer 0 1 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 0 1 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 0 1 2</q3>
+			</q2>
+			<q2 ans="2">
+				<q3 ans="0" img="result_image.jpg">answer 0 2 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 0 2 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 0 2 2</q3>
+			</q2>
+		</q1>
+		
+		<q1 ans="1">
+			<q2 ans="0">
+				<q3 ans="0" img="result_image.jpg">answer 1 0 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 1 0 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 1 0 2</q3>
+			</q2>
+			<q2 ans="1">
+				<q3 ans="0" img="result_image.jpg">answer 1 1 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 1 1 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 1 1 2</q3>
+			</q2>
+			<q2 ans="2">
+				<q3 ans="0" img="result_image.jpg">answer 1 2 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 1 2 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 1 2 2</q3>
+			</q2>
+		</q1>
+		
+		
+		<q1 ans="2">
+			<q2 ans="0">
+				<q3 ans="0" img="result_image.jpg">answer 2 0 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 2 0 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 2 0 2</q3>
+			</q2>
+			<q2 ans="1">
+				<q3 ans="0" img="result_image.jpg">answer 2 1 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 2 1 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 2 1 2</q3>
+			</q2>
+			<q2 ans="2">
+				<q3 ans="0" img="result_image.jpg">answer 2 2 0</q3>
+				<q3 ans="1" img="result_image.jpg">answer 2 2 1</q3>
+				<q3 ans="2" img="result_image.jpg">answer 2 2 2</q3>
+			</q2>
+		</q1>
+	</results>
+	
+	
+</root>
+
+

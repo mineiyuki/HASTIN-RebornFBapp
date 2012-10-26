@@ -1,0 +1,8 @@
+when defining the app on facebook
+point the Page Tab URL, and Secure Page Tab URL to this folder.
+
+there are 3 main configuration files used to set up the app
+
+application/config/app_config.php 	- edit facebook data and main page elements
+data/config.xml 					- edit the questions, answers and result messages
+css/style.css						- stylesheet for the app
