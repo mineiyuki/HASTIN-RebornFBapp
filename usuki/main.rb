@@ -2,5 +2,5 @@ require 'haml'
 require 'sinatra'
 
 get '/' do
-  "hello"
+  haml :index
 end
