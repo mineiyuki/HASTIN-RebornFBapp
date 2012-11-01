@@ -3,18 +3,20 @@
   %head
     %script{:type=>"text/javascript",:src=>"jquery-1.6.4.min.js"}
     %script{:src=>"quiz.js",:type=>"text/javascript"}
-    %title Manga Reborn
+    %title
+      Manga Reborn
   %body
     %h1
       Manga Reborn
     %h4
       you should choice!
-    %p
+    %p{:name=>""}
       %form{:action=>"./#"}
         %div
           Which dou you like?
-        %input{:type=>"radio",:value=>"xxx",:checked=>"checked"}
-          xxx
-        %input{:type=>"radio",:value=>"yyy"}
-          yyy
-        %input{:type=>"submit",:value=>"submit"}
+        %input{:name=>"quiz1",:type=>"radio",:value=>"aaa",:checked=>"checked"}
+          aaa
+        %input{:name=>"quiz1",:type=>"radio",:value=>"bbb"}
+          bbb
+        %div
+          %input{:type=>"submit",:value=>"submit"}
