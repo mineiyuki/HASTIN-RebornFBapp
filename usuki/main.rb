@@ -6,6 +6,5 @@ get '/' do
 end
 
 post '/result' do
-  puts params[:quiz1]
   haml :result
 end
