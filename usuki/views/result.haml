@@ -8,5 +8,13 @@
   %body
     %h1
       Result
-    %div= params[:quiz1] 
- 
+    %div
+      you choose
+      %span= params[:quiz1] 
+    %div
+      - if params[:quiz1] == "dog" then
+        %span
+          you are kind.
+      - else
+        %span
+          you are cool.

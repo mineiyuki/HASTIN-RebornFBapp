@@ -8,15 +8,15 @@
   %body
     %h1
       Manga Reborn
-    %h4
-      you should choice!
-    %p{:name=>"hoge"}
+    %h3
+      Choose!
+    %p
       %form{:action=>"./result",:method=>"POST"}
         %div
           Which dou you like?
-        %input{:name=>"quiz1",:type=>"radio",:value=>"aaa",:checked=>"checked"}
-          aaa
-        %input{:name=>"quiz1",:type=>"radio",:value=>"bbb"}
-          bbb
+        %input{:name=>"quiz1",:type=>"radio",:value=>"dog",:checked=>"checked"}
+          Dog
+        %input{:name=>"quiz1",:type=>"radio",:value=>"cat"}
+          Cat
         %div
           %input{:type=>"submit",:value=>"submit"}
