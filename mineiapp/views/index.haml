@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Hello, Haml!
+  %body
+    #header
+      %h1 Hello, Haml!
+    #content
+      %p
+        性癖診断！
+      %form{:action=>"/", :method=>"post"}
+        %h2
+          ポッキーは好きですか？
+        %input{:type=> "radio", :name=> "question1", :value=>"1"} はい
+        %input{:type=> "radio", :name=> "question1", :value=>"2"} いいえ
+        %h2
+          あなたは男の娘ですか？
+        %input{:type=> "radio", :name=> "question2", :value=>"10"} はい
+        %input{:type=> "radio", :name=> "question2", :value=>"20"} いいえ
+        %h2
+          結果を見る
+        %input{:type=>"submit", :value=>"send"}
