@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title = @appname
+  %body
+    #header
+      %h1 = @appname
+    #content
+      %form{:action=>"/", :method=>"post"}
+        %h2 = @qtext
+        %input{:type=> "radio", :name=> @atext, :value=> @point} はい
+        %input{:type=> "radio", :name=> @atext, :value=> @point} いいえ
+          結果を見る
+        %input{:type=>"submit", :value=>"send"}
