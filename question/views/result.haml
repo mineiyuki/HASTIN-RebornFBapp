@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Hello, Haml!
+  %body
+    #header
+      %h1 診断結果
+    #content
+      %h2 各質問に何番で回答したか？
+      - 1.upto(@questionData.size) do |i|
+        %p= "#{i-1}番の質問には、"
+        %strong= @answer[i-1]
+        番の答えが選択されています。
+        %p= @pointData[0][i-1][@answer[i-1]]

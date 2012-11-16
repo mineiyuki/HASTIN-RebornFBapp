@@ -2,8 +2,16 @@
 
 require 'sinatra'
 require 'haml'
+require 'mysql'
+
+def dbSetting
+  my = Mysql.connect('localhost', 'root', 'hastin', 'hastin')
+  my.charset = 'utf8'
+  return 'hogehoge' #my.query('SELECT *  FROM `applist` WHERE `appid` = 0')
+end
 
 get '/' do
+#  @appname = dbSetting
   haml :index
 end
 

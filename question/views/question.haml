@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Hello, Haml!
+  %body
+    #header
+      %h1 性癖診断
+    #content
+      %form{:action=>"/", :method=>"post"}
+        - 1.upto(@questionData.size) do |i|
+          %h2= @questionData[i-1][0]
+          - 1.upto(@questionData[i-1][1].size) do |j|
+            %input{:type=> "radio", :name=> "answer[#{i-1}]", :value=>"#{j-1}"} 
+            %span= @questionData[i-1][1][j-1]
+        %p
+          結果を見る
+        %input{:type=>"submit", :value=>"send"}
