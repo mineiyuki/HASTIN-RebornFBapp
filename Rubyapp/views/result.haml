@@ -1,9 +1,10 @@
 !!!
 %html
   %head
-    %title = @appname
+    %title 診断結果
   %body
-    #header
-      %h1 診断結果
-    #content
-      %p= @resulturl
+    %h1 診断結果
+    %h2
+      あなたは#{@type}タイプです
+    %p
+      %div= @explain
