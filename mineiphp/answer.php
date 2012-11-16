@@ -6,7 +6,7 @@
 <body>
   <?php
    $key=isset($_POST['key']) ? htmlspecialchars($_POST['key']) : "";
-   require_once 'src/facebook.php';
+   require_once 'http://mineiyuki.com/hastin/src/facebook.php';
   
    $facebook = new Facebook(array(
     'appId' => '461867823852501',
