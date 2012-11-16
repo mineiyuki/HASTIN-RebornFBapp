@@ -1,14 +1,12 @@
 !!!
 %html
   %head
-    %title = @appname
+    %title= "manga"
   %body
-    #header
-      %h1 = @appname
-    #content
-      %form{:action=>"/", :method=>"post"}
-        %h2 = @qtext
-        %input{:type=> "radio", :name=> @atext, :value=> @point} はい
-        %input{:type=> "radio", :name=> @atext, :value=> @point} いいえ
-          結果を見る
-        %input{:type=>"submit", :value=>"send"}
+    %form{:action=>'./result',:method=>'POST'}
+      %div= @q1
+      %input{:type=>'radio',:value=>0,:name=>'first'}
+        %div= @a1
+      %input{:type=>'radio',:value=>1,:name=>'first'}
+        %div= @a2
+      %input{:type=>'submit',:value=>"submit"}
