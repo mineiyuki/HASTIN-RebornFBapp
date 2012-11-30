@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+img {vertical-align: bottom;}
+img,img a{border:none;}
+body{
+	margin: 0;
+	padding:10px 0;
+	font-family: "メイリオ","Meiryo", "Osaka", "MS Pゴシック", "MSゴシック",Helvetica, verdana, arial;
+	min-height: 700px;
+}
+h1{margin:0 0 50px;}
+h2{margin:0 0 30px;}
+p{margin:0 0 10px;}
+.small{font-size:0.7em;}
+.b{font-weight:bold;}
+.wrap {
+	margin: 0px auto;
+	width: 600px;
+	text-align:center;
+}
+#msg{
+	text-align:left;
+}
+a.btn,
+input[type="submit"].btn {
+	margin: 0 auto 10px;
+	border: 0;
+	padding: 10px 20px;
+	display: block;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px 1px #aaa;
+	font-size: 20px;
+	text-shadow: 1px 1px 3px #CCC;
+	font-weight: bold;
+	width: 80%;
+	text-decoration: none;
+}

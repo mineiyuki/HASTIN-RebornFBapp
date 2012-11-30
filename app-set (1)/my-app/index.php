@@ -120,16 +120,13 @@ echo "<script type='text/javascript'>top.location.href = '$fb_login_url';</scrip
 <div class="wrap">
 <h1 style="text-align:center;"><img src="images/title_img.jpg" alt="<?php echo $arr['app_title']; ?>" title="<?php echo $arr['app_title']; ?>" /></h1>
 
-
-
-<?php
+<?php /* ファンゲート追記 */
 if (isset($_POST['signed_request'])) {
     list($encoded_sig, $payload) = explode('.', $_POST['signed_request'], 2); 
     $data = json_decode(base64_decode(strtr($payload, '-_', '+/')), true);
 }
 ?>
-<?php if ($data && $data['page']['liked']) : ?>
-
+<?php if ($data && $data['page']['liked']) : /* ここまで追記 */ ?>
 
 
 <?php
