@@ -1,3 +1,4 @@
+■サーバー情報
 
      FTPサーバ名     ： mecab.sakura.ne.jp
      FTPアカウント   ： mecab
@@ -6,3 +7,6 @@
 
      POP3(受信)サーバ： mecab.sakura.ne.jp
      SMTP(送信)サーバ： mecab.sakura.ne.jp
+
+■作業フォルダ
+/home/mecab/www/mineiyuki.com/hastin
