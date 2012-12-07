@@ -126,8 +126,8 @@ echo "<script type='text/javascript'>top.location.href = '$fb_login_url';</scrip
 if(($_POST['flg']) == 'result'){
 
 	$app_title = $arr['app_title'];
-//	$page_url = $arr['page_url'];
-	$page_url = 'http://www.facebook.com/HastinTest/app_461867823852501';
+	$page_url = $arr['page_url'];
+//	$page_url = 'http://www.facebook.com/HastinTest/app_461867823852501';
 	$app_desc = $arr['app_desc'];
 	$app_url = $arr['app_url'];
 	$intro_msg = $arr['intro_msg'];

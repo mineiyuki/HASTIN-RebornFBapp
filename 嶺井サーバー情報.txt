@@ -1,0 +1,8 @@
+
+     FTPサーバ名     ： mecab.sakura.ne.jp
+     FTPアカウント   ： mecab
+     FTP初期フォルダ ： www
+     サーバパスワード： aen4asb22f
+
+     POP3(受信)サーバ： mecab.sakura.ne.jp
+     SMTP(送信)サーバ： mecab.sakura.ne.jp
