@@ -59,11 +59,12 @@ if (isset($_POST['signed_request'])) {
 <?php if ($data && $data['page']['liked']) : ?>
 <!-- ■ いいね後 ■ -->
 
-<!--
 <a href="<?php echo $arr['app_url']; ?>" target="_parent" class="btn">アプリへ移動</a>
+
+<!--
+<a href="https://secure2188.sakura.ne.jp/mineiyuki.com/hastin/" class="btn">アプリへ移動</a>
 -->
 
-<a href="https://secure2188.sakura.ne.jp/mineiyuki.com/hastin/" class="btn">アプリへ移動</a>
 
 <?php else : ?>
 <!-- ■ いいね前 ■ -->
