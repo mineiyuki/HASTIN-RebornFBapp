@@ -53,6 +53,15 @@ if (isset($_POST['signed_request'])) {
     list($encoded_sig, $payload) = explode('.', $_POST['signed_request'], 2); 
     $data = json_decode(base64_decode(strtr($payload, '-_', '+/')), true);
 }
+
+//言語設定をセッション情報として保存
+	session_start();
+    if($data['user']['locale'] == "ja_JP"){
+		$_SESSION['lang'] = "ja_JP";
+    }else{
+		$_SESSION['lang'] = "en_US";
+    }
+
 ?>
 <?php if ($data && $data['page']['liked']) : ?>
 <!-- ■ いいね後 ■ -->
@@ -78,6 +87,7 @@ if (isset($_POST['signed_request'])) {
 
 
 <h2><?php /* echo $arr['iine_req']; */ ?>いいねを押してね！</h2>
+
 
 <?php endif; ?>
 

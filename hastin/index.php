@@ -19,24 +19,68 @@ $coupling = array(
 	'2222' => '16',
 );
 
-if($fh = @fopen('data.txt','r')){
-	while(FALSE !== ($line = fgets($fh))){
-		$arr = unserialize($line);
-	}
-	fclose($fh);
+session_start();
 
-	// facebook固有の処理(facebookオブジェクト作成)
-	require 'facebook.php';
-	$facebook = new Facebook(array(
-		'appId' => $arr['app_id'],
-		'secret' => $arr['app_sec'],
-		'cookie' => true
-	));
+//言語設定
+
+if($_SESSION['lang'] == "ja_JP"){
+	//日本の場合は日本語で
+	${result_btn_text} = '結果を見る';
+	${result_alert} = '※結果はウォールに投稿されます';
+	${waiting} = '診断中...';
+}else{
+	//日本以外の場合は英語で
+	${result_btn_text} = 'Look at result';
+	${result_alert} = 'App post on your wall the result!';
+	${waiting} = 'making result';
+}
+
+//以下data.txtの読み込み分岐
+
+if($_SESSION['lang'] == "ja_JP"){
+
+	if($fh = @fopen('data2.txt','r')){
+		while(FALSE !== ($line = fgets($fh))){
+			$arr = unserialize($line);
+		}
+		fclose($fh);
+	
+		// facebook固有の処理(facebookオブジェクト作成)
+		require 'facebook.php';
+		$facebook = new Facebook(array(
+			'appId' => $arr['app_id'],
+			'secret' => $arr['app_sec'],
+			'cookie' => true
+		));
+	
+	}else{
+		echo 'ただいまサイトのメンテナンス中です';
+		exit;
+	}
 
 }else{
-	echo 'ただいまサイトのメンテナンス中です';
-    exit;
+
+	if($fh = @fopen('data.txt','r')){
+		while(FALSE !== ($line = fgets($fh))){
+			$arr = unserialize($line);
+		}
+		fclose($fh);
+	
+		// facebook固有の処理(facebookオブジェクト作成)
+		require 'facebook.php';
+		$facebook = new Facebook(array(
+			'appId' => $arr['app_id'],
+			'secret' => $arr['app_sec'],
+			'cookie' => true
+		));
+	
+	}else{
+		echo 'maintenance';
+		exit;
+	}
+
 }
+
 ?>
 
 <!doctype html>
@@ -153,12 +197,12 @@ if(($_POST['flg']) == 'result'){
 
 	echo <<<END
 	<h2><span class="small">${intro_msg}</span><br />
-	「${title}」です！</h2>
+	${title}</h2>
 	<div style="margin-bottom:10px;text-align:center;">
 	<img src="images/${type}.jpg" alt="${title}" title="${title}" style="max-width:580px;" />
 	</div>
 	<p id="msg">${msg}</p>
-	<div>${ft_msg}</div>
+<!--	<div>${ft_msg}</div> -->
 END;
 
 // facebook固有の処理(ウォールへの投稿)
@@ -169,13 +213,13 @@ if ($fb_user) {// アルバム作成
 	// アルバムの中身を作成
 	$wall = <<<END
 ${intro_msg}
-「${title}」です！
+${title}
 ${msg}
 
 【${app_title}】
 ${app_desc}
 -----------------------------------------------------
-${app_title}は、こちら。
+${app_title}
 ${link_url}
 -----------------------------------------------------
 ${wall_sign}
@@ -192,7 +236,7 @@ END;
 
 	$result = $_POST['a1'].$_POST['a2'].$_POST['a3'].$_POST['a4'];
 
-	echo '<h2>診断中...</h2>';
+	echo '<h2></h2>';
 
 	echo <<<END
 		<p><img src="images/1.gif" width="250" height="187" name="myFormImg"></p>
@@ -201,11 +245,11 @@ END;
 		// --></script>
 	
 		<form method="post" onSubmit="return nidoosi(this)">
-		<input type="submit" value="結果を見る" class="end_btn btn" />
+		<input type="submit" value="${result_btn_text}" class="end_btn btn" />
 		<input type="hidden" name="result" value="${result}" />
 		<input type="hidden" name="flg" value="result" />
 		</form>
-		<p>※結果はウォールに投稿されます</p>
+		<p>${result_alert}</p>
 END;
 
 }elseif(($_POST['flg']) == '4'){
@@ -255,7 +299,6 @@ END;
 END;
 
 }elseif(($_POST['flg']) == '2'){
-
 	echo <<<END
         <h2>${arr['q2']}</h2>
     
@@ -274,12 +317,9 @@ END;
         </form>
 END;
 
-//}elseif(($_POST['flg']) == '1'){
 }else{
-
 	// アクセストークン取得(更新)
 	$facebook->getAccessToken();
-
 
 	echo <<<END
         <h2>${arr['q1']}</h2>
@@ -298,25 +338,6 @@ END;
 END;
 
 }
-
-/*
-}else{
-
-	// アクセストークン取得(更新)
-	$facebook->getAccessToken();
-
-	echo <<<END
-    
-        <p class="b">${arr['app_desc']}</p>
-        <form method="post">
-        <input type="submit" value="${arr['app_start_btn']}" class="a1_1 btn" />
-        <input type="hidden" name="flg" value="1" />
-        </form>
-    
-END;
-
-}
-*/
 
 ?>
 
