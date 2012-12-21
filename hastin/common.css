@@ -15,8 +15,9 @@ p{margin:0 0 10px;}
 .b{font-weight:bold;}
 .wrap {
 	margin: 0px auto;
-	width: 600px;
+	width: 650px;
 	text-align:center;
+	position:relative;
 }
 #msg{
 	text-align:left;
@@ -41,9 +42,8 @@ input[type="submit"].btn {
 
 #top2{
    	position: absolute;
-   	width: 600px;
    	top: 233px;
-   	left: 278px;
+	right:0;
 }
 
 #top2:hover{

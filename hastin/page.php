@@ -43,12 +43,10 @@ input[type="submit"].btn:hover{
 
 
 <div class="wrap">
-<h1><img src="images/top7.png" alt="<?php echo $arr['app_title']; ?>" title="<?php echo $arr['app_title']; ?>" /></h1>
 
-<div id="top3"><img src="images/top8.png"></div>
-<div id="top2"><img src="images/top4.png" onmouseover="this.src='images/top6.png';" onmouseout="this.src='images/top4.png'" /></div>
-
+<?php /*
 <p class="b"><?php echo $arr['app_desc']; ?></p>
+*/ ?>
 
 <?php
 if (isset($_POST['signed_request'])) {
@@ -59,7 +57,15 @@ if (isset($_POST['signed_request'])) {
 <?php if ($data && $data['page']['liked']) : ?>
 <!-- ■ いいね後 ■ -->
 
+<h1><img src="images/top7.png" alt="<?php echo $arr['app_title']; ?>" title="<?php echo $arr['app_title']; ?>" /></h1>
+
+<div id="top3"><img src="images/top8.png"></div>
+<div id="top2"><a href="<?php echo $arr['app_url']; ?>" target="_parent"><img src="images/top4.png" onmouseover="this.src='images/top6.png';" onmouseout="this.src='images/top4.png'" /></a></div>
+
+
+<!--
 <a href="<?php echo $arr['app_url']; ?>" target="_parent" class="btn">アプリへ移動</a>
+-->
 
 <!--
 <a href="https://secure2188.sakura.ne.jp/mineiyuki.com/hastin/" class="btn">アプリへ移動</a>
@@ -68,6 +74,8 @@ if (isset($_POST['signed_request'])) {
 
 <?php else : ?>
 <!-- ■ いいね前 ■ -->
+
+
 
 <h2><?php /* echo $arr['iine_req']; */ ?>いいねを押してね！</h2>
 
